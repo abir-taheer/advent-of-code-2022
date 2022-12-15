@@ -72,5 +72,5 @@ const part2 = async () => {
   return score;
 };
 
-part1().then(console.log);
-part2().then(console.log);
+part1().then((p1) => console.log({ p1 }));
+part2().then((p2) => console.log({ p2 }));

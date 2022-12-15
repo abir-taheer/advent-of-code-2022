@@ -1,26 +1,18 @@
 import { getInput } from "../utils/getInput";
-import { sum } from "../utils/sum";
+
+const day = 1;
 
 const parseInput = async () => {
-  const raw = await getInput(1);
-  return raw.split("\n\n").map((a) => a.split("\n").map(Number));
+  const raw = await getInput(day);
+  return raw.split("\n");
 };
 
 const part1 = async () => {
   const input = await parseInput();
-
-  return Math.max(...input.map((elf) => sum(elf)));
 };
 
 const part2 = async () => {
   const input = await parseInput();
-
-  return sum(
-    input
-      .map((elf) => sum(elf))
-      .sort((a, b) => b - a)
-      .slice(0, 3)
-  );
 };
 
 part1().then((p1) => console.log({ p1 }));
