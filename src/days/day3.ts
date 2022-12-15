@@ -1,5 +1,5 @@
 import { getInput } from "../utils/getInput";
-import { groupItems } from "../utils/groupArrays";
+import { groupItems } from "../utils/groupItems";
 
 const day = 3;
 
