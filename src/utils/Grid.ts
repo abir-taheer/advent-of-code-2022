@@ -86,6 +86,10 @@ export class Cell<T> {
     return this.value!;
   }
 
+  setValue(val: T) {
+    this.value = val;
+  }
+
   getAdjacent(dir: Direction) {
     const row =
       dir === "up" ? this.row - 1 : dir === "down" ? this.row + 1 : this.row;
